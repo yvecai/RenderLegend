@@ -1,0 +1,11 @@
+Set of tools to create a legend (or mapkey) of an Openstreetmap Map with
+Mapnik.
+
+The core of the project is RenderLegendElement.py that rendered a small 
+pic with given tags, size and shape against a mapnik style sheet.
+It make use of the osm datasource in mapnik, and does not need any sql
+database.
+
+Usage exemple:
+>>>import renderLegendElement
+>>>renderLegendElement("osm.xml", 'line',["[highway]='primary'"],18, 50, 'output.png')
