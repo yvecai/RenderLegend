@@ -4,7 +4,7 @@
 Input:
  _ mapnik stylesheet
  _ elementType: point, line, square, rectangle, pointtext, linetext,
-   lineshield, squaretext, rectangletext, squarepoint
+   lineshield, squaretext, rectangletext, squarepoint and smallline
  _ tagList in python style ["[key]='value'", "[key]='value'"]
  _ style, to select the appropriate layer
  _ zoom
@@ -352,6 +352,23 @@ def createOsmElement(elementType, tagList, zoom):
         insertNode(fosm,-10,0,lon0 - dlon/2)
         fosm.write("  </node>\n")
         insertNode(fosm,-11,0,lon0 + dlon/2)
+        fosm.write("  </node>\n")
+        fosm.write("  <way id=\"-12\" visible=\"true\">\n\
+         <nd ref=\"-10\" />\n\
+         <nd ref=\"-11\" />\n")
+        for t in tagList:
+            fosm.write( "    <tag k=\"%s\" v=\"%s\"/>\n" % (getTagKey(t), getTagValue(t)))
+        fosm.write("  </way>\n")
+        fosm.write("</osm>")
+        strOSm = fosm.getvalue()
+        fosm.close()
+        bbox=((lon0 - dlon/2), lat0 - dlat/2*1.5, (lon0 + dlon/2), lat0 + dlat/2*1.5)
+        return strOSm, bbox
+    #
+    if elementType == 'smallline':
+        insertNode(fosm,-10,0,lon0 - dlon/2*0.6)
+        fosm.write("  </node>\n")
+        insertNode(fosm,-11,0,lon0 + dlon/2*0.6)
         fosm.write("  </node>\n")
         fosm.write("  <way id=\"-12\" visible=\"true\">\n\
          <nd ref=\"-10\" />\n\

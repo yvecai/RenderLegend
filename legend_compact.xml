@@ -1,144 +1,178 @@
 <?xml version="1.0" ?><legend>
   <page>Roads 
   <title name="roads">Roads 
-  <line><element caption="motorway">
-    <id>1</id>
-    <type>line</type>
-    <tag k="highway" v="motorway"/>
-  </element><element caption="motorway bridge">
-    <id>2</id>
-    <type>line</type>
-    <tag k="highway" v="motorway"/>
-    <tag k="bridge" v="yes"/>
-  </element><element caption="motorway tunnel">
-    <id>3</id>
-    <type>line</type>
-    <tag k="highway" v="motorway"/>
-    <tag k="tunnel" v="yes"/>
-  </element></line>
-  <line><element caption="trunk">
-    <id>4</id>
-    <type>line</type>
-    <tag k="highway" v="trunk"/>
-  </element><element caption="trunk bridge">
-    <id>5</id>
-    <type>line</type>
-    <tag k="highway" v="trunk"/>
-    <tag k="bridge" v="yes"/>
-  </element><element caption="trunk tunnel">
-    <id>6</id>
-    <type>line</type>
-    <tag k="highway" v="trunk"/>
-    <tag k="tunnel" v="yes"/>
-  </element></line>
-  <line><element caption="primary">
-    <id>7</id>
-    <type>line</type>
-    <tag k="highway" v="primary"/>
-  </element><element caption="primary bridge">
-    <id>8</id>
-    <type>line</type>
-    <tag k="highway" v="primary"/>
-    <tag k="bridge" v="yes"/>
-  </element><element caption="primary tunnel">
-    <id>9</id>
-    <type>line</type>
-    <tag k="highway" v="primary"/>
-    <tag k="tunnel" v="yes"/>
-  </element></line>
-  <line><element caption="secondary">
-    <id>10</id>
-    <type>line</type>
-    <tag k="highway" v="secondary"/>
-  </element><element caption="secondary bridge">
-    <id>11</id>
-    <type>line</type>
-    <tag k="highway" v="secondary"/>
-    <tag k="bridge" v="yes"/>
-  </element><element caption="secondary tunnel">
-    <id>12</id>
-    <type>line</type>
-    <tag k="highway" v="secondary"/>
-    <tag k="tunnel" v="yes"/>
-  </element></line>
-  <line><element caption="tertiary">
-    <id>13</id>
-    <type>line</type>
-    <tag k="highway" v="tertiary"/>
-  </element><element caption="tertiary bridge">
-    <id>14</id>
-    <type>line</type>
-    <tag k="highway" v="tertiary"/>
-    <tag k="bridge" v="yes"/>
-  </element><element caption="tertiary tunnel">
-    <id>15</id>
-    <type>line</type>
-    <tag k="highway" v="tertiary"/>
-    <tag k="tunnel" v="yes"/>
-  </element></line>
-  <line><element caption="road">
-    <id>16</id>
-    <type>line</type>
-    <tag k="highway" v="road"/>
-  </element><element caption="road bridge">
-    <id>17</id>
-    <type>line</type>
-    <tag k="highway" v="road"/>
-    <tag k="bridge" v="yes"/>
-  </element><element caption="road tunnel">
-    <id>18</id>
-    <type>line</type>
-    <tag k="highway" v="road"/>
-    <tag k="tunnel" v="yes"/>
-  </element></line>
+  <line>
+    <element caption="motorway">
+      <id>1</id>
+      <type>line</type>
+      <tag k="highway" v="motorway"/>
+    </element>
+    <element caption="bridge">
+      <id>2</id>
+      <type>line</type>
+      <tag k="highway" v="motorway"/>
+      <tag k="bridge" v="yes"/>
+    </element>
+    <element caption="tunnel">
+      <id>3</id>
+      <type>line</type>
+      <tag k="highway" v="motorway"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
+  </line>
+  <line>
+    <element caption="trunk">
+      <id>4</id>
+      <type>line</type>
+      <tag k="highway" v="trunk"/>
+    </element>
+    <element caption="bridge">
+      <id>5</id>
+      <type>line</type>
+      <tag k="highway" v="trunk"/>
+      <tag k="bridge" v="yes"/>
+    </element>
+    <element caption="tunnel">
+      <id>6</id>
+      <type>line</type>
+      <tag k="highway" v="trunk"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
+  </line>
+  <line>
+    <element caption="primary">
+      <id>7</id>
+      <type>line</type>
+      <tag k="highway" v="primary"/>
+    </element>
+    <element caption="bridge">
+      <id>8</id>
+      <type>line</type>
+      <tag k="highway" v="primary"/>
+      <tag k="bridge" v="yes"/>
+    </element>
+    <element caption="tunnel">
+      <id>9</id>
+      <type>line</type>
+      <tag k="highway" v="primary"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
+  </line>
+  <line>
+    <element caption="secondary">
+      <id>10</id>
+      <type>line</type>
+      <tag k="highway" v="secondary"/>
+    </element>
+    <element caption="bridge">
+      <id>11</id>
+      <type>line</type>
+      <tag k="highway" v="secondary"/>
+      <tag k="bridge" v="yes"/>
+    </element>
+    <element caption="tunnel">
+      <id>12</id>
+      <type>line</type>
+      <tag k="highway" v="secondary"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
+  </line>
+  <line>
+    <element caption="tertiary">
+      <id>13</id>
+      <type>line</type>
+      <tag k="highway" v="tertiary"/>
+    </element>
+    <element caption="bridge">
+      <id>14</id>
+      <type>line</type>
+      <tag k="highway" v="tertiary"/>
+      <tag k="bridge" v="yes"/>
+    </element>
+    <element caption="tunnel">
+      <id>15</id>
+      <type>line</type>
+      <tag k="highway" v="tertiary"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
+  </line>
+  <line>
+    <element caption="road">
+      <id>16</id>
+      <type>line</type>
+      <tag k="highway" v="road"/>
+    </element>
+    <element caption="bridge">
+      <id>17</id>
+      <type>line</type>
+      <tag k="highway" v="road"/>
+      <tag k="bridge" v="yes"/>
+    </element>
+    <element caption="tunnel">
+      <id>18</id>
+      <type>line</type>
+      <tag k="highway" v="road"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
+  </line>
   <line>
     <element caption="residential">
       <id>19</id>
       <type>line</type>
       <tag k="highway" v="residential"/>
     </element>
-    <element caption="residential bridge">
-    <id>20</id>
-    <type>line</type>
-    <tag k="highway" v="residential"/>
-    <tag k="bridge" v="yes"/>
-  </element><element caption="residential tunnel">
-    <id>21</id>
-    <type>line</type>
-    <tag k="highway" v="residential"/>
-    <tag k="tunnel" v="yes"/>
-  </element>
-    
+      <element caption="bridge">
+      <id>20</id>
+      <type>line</type>
+      <tag k="highway" v="residential"/>
+      <tag k="bridge" v="yes"/>
+    </element>
+    <element caption="tunnel">
+      <id>21</id>
+      <type>line</type>
+      <tag k="highway" v="residential"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
   </line>
-  <line><element caption="minor">
+  <line>
+    <element caption="minor">
       <id>22</id>
       <type>line</type>
       <tag k="highway" v="minor"/>
-    </element><element caption="minor bridge">
-    <id>23</id>
-    <type>line</type>
-    <tag k="highway" v="minor"/>
-    <tag k="bridge" v="yes"/>
-  </element><element caption="minor tunnel">
-    <id>24</id>
-    <type>line</type>
-    <tag k="highway" v="minor"/>
-    <tag k="tunnel" v="yes"/>
-  </element></line><line><element caption="unclassified">
+    </element>
+    <element caption="bridge">
+      <id>23</id>
+      <type>line</type>
+      <tag k="highway" v="minor"/>
+      <tag k="bridge" v="yes"/>
+    </element>
+    <element caption="tunnel">
+      <id>24</id>
+      <type>line</type>
+      <tag k="highway" v="minor"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
+  </line>
+  <line>
+    <element caption="unclassified">
       <id>25</id>
       <type>line</type>
       <tag k="highway" v="unclassified"/>
-    </element><element caption="unclassified bridge">
-    <id>26</id>
-    <type>line</type>
-    <tag k="highway" v="unclassified"/>
-    <tag k="bridge" v="yes"/>
-  </element><element caption="unclassified tunnel">
-    <id>27</id>
-    <type>line</type>
-    <tag k="highway" v="unclassified"/>
-    <tag k="tunnel" v="yes"/>
-  </element></line><line>
+    </element>
+    <element caption="bridge">
+      <id>26</id>
+      <type>line</type>
+      <tag k="highway" v="unclassified"/>
+      <tag k="bridge" v="yes"/>
+    </element>
+    <element caption="tunnel">
+      <id>27</id>
+      <type>line</type>
+      <tag k="highway" v="unclassified"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
+  </line>
+  <line>
     <element caption="living_street">
       <id>28</id>
       <type>rectangle</type>
@@ -160,61 +194,68 @@
       <id>31</id>
       <type>line</type>
       <tag k="highway" v="pedestrian"/>
-    </element><element caption="pedestrian tunnel">
-    <id>32</id>
-    <type>line</type>
-    <tag k="highway" v="pedestrian"/>
-    <tag k="tunnel" v="yes"/>
-  </element>
+    </element>
+    <element caption="steps">
+      <id>32</id>
+      <type>line</type>
+      <tag k="highway" v="steps"/>
+    </element>
+  </line>
+  <line>
+    <element caption="pedestrian bridge">
+      <id>33</id>
+      <type>line</type>
+      <tag k="highway" v="pedestrian"/>
+      <tag k="bridge" v="yes"/>
+    </element>
+    <element caption="tunnel">
+      <id>34</id>
+      <type>line</type>
+      <tag k="highway" v="pedestrian"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
   </line>
   <line>
     <element caption="service">
-      <id>33</id>
+      <id>35</id>
       <type>rectangle</type>
       <tag k="highway" v="service"/>
     </element>
     <element caption="service">
-      <id>34</id>
+      <id>36</id>
       <type>line</type>
       <tag k="highway" v="service"/>
     </element>
-  </line><line><element caption="service bridge">
-    <id>35</id>
+  </line>
+  <line>
+  <element caption="service bridge">
+    <id>37</id>
     <type>line</type>
     <tag k="highway" v="service"/>
     <tag k="bridge" v="yes"/>
   </element><element caption="service tunnel">
-    <id>36</id>
-    <type>line</type>
-    <tag k="highway" v="service"/>
-    <tag k="tunnel" v="yes"/>
-  </element></line><line><element caption="pedestrian bridge">
-    <id>37</id>
-    <type>line</type>
-    <tag k="highway" v="pedestrian"/>
-    <tag k="bridge" v="yes"/>
-  </element><element caption="parking_aisle">
     <id>38</id>
     <type>line</type>
     <tag k="highway" v="service"/>
-    <tag k="service" v="parking_aisle"/>
-  </element><element caption="steps">
+    <tag k="tunnel" v="yes"/>
+  </element>
+  </line>
+  <element caption="parking_aisle">
     <id>39</id>
     <type>line</type>
-    <tag k="highway" v="steps"/>
-  </element></line>
-  
-  
+    <tag k="highway" v="service"/>
+    <tag k="service" v="parking_aisle"/>
+  </element>
   <line><element caption="bridleway">
     <id>40</id>
     <type>line</type>
     <tag k="highway" v="bridleway"/>
-  </element><element caption="bridleway bridge">
+  </element><element caption="bridge">
     <id>41</id>
     <type>line</type>
     <tag k="highway" v="bridleway"/>
     <tag k="bridge" v="yes"/>
-  </element><element caption="bridleway tunnel">
+  </element><element caption="tunnel">
     <id>42</id>
     <type>line</type>
     <tag k="highway" v="bridleway"/>
@@ -224,12 +265,12 @@
     <id>43</id>
     <type>line</type>
     <tag k="highway" v="footway"/>
-  </element><element caption="footway bridge">
+  </element><element caption="bridge">
     <id>44</id>
     <type>line</type>
     <tag k="highway" v="footway"/>
     <tag k="bridge" v="yes"/>
-  </element><element caption="footway tunnel">
+  </element><element caption="tunnel">
     <id>45</id>
     <type>line</type>
     <tag k="highway" v="footway"/>
@@ -239,12 +280,12 @@
     <id>46</id>
     <type>line</type>
     <tag k="highway" v="cycleway"/>
-  </element><element caption="cycleway bridge">
+  </element><element caption="bridge">
     <id>47</id>
     <type>line</type>
     <tag k="highway" v="cycleway"/>
     <tag k="bridge" v="yes"/>
-  </element><element caption="cycleway tunnel">
+  </element><element caption="tunnel">
     <id>48</id>
     <type>line</type>
     <tag k="highway" v="cycleway"/>
@@ -254,12 +295,12 @@
     <id>49</id>
     <type>line</type>
     <tag k="highway" v="byway"/>
-  </element><element caption="byway bridge">
+  </element><element caption="bridge">
     <id>50</id>
     <type>line</type>
     <tag k="highway" v="byway"/>
     <tag k="bridge" v="yes"/>
-  </element><element caption="byway tunnel">
+  </element><element caption="tunnel">
     <id>51</id>
     <type>line</type>
     <tag k="highway" v="byway"/>
@@ -275,170 +316,200 @@
       <type>line</type>
       <tag k="highway" v="track"/>
     </element>
-    
   </line>
-  <line><element caption="grade1 track">
-    <id>54</id>
-    <type>line</type>
-    <tag k="tracktype" v="grade1"/>
-    <tag k="highway" v="track"/>
-  </element><element caption="grade1 bridge">
-    <id>55</id>
-    <type>line</type>
-    <tag k="tracktype" v="grade1"/>
-    <tag k="highway" v="track"/>
-    <tag k="bridge" v="yes"/>
-  </element><element caption="grade1 tunnel">
-    <id>56</id>
-    <type>line</type>
-    <tag k="tracktype" v="grade1"/>
-    <tag k="highway" v="track"/>
-    <tag k="tunnel" v="yes"/>
-  </element></line>
-  <line><element caption="grade2 track">
-    <id>57</id>
-    <type>line</type>
-    <tag k="tracktype" v="grade2"/>
-    <tag k="highway" v="track"/>
-  </element><element caption="grade2 bridge">
-    <id>58</id>
-    <type>line</type>
-    <tag k="tracktype" v="grade2"/>
-    <tag k="highway" v="track"/>
-    <tag k="bridge" v="yes"/>
-  </element><element caption="grade2 tunnel">
-    <id>59</id>
-    <type>line</type>
-    <tag k="tracktype" v="grade2"/>
-    <tag k="highway" v="track"/>
-    <tag k="tunnel" v="yes"/>
-  </element></line>
-  <line><element caption="grade3 track">
-    <id>60</id>
-    <type>line</type>
-    <tag k="tracktype" v="grade3"/>
-    <tag k="highway" v="track"/>
-  </element><element caption="grade3 bridge">
-    <id>61</id>
-    <type>line</type>
-    <tag k="tracktype" v="grade3"/>
-    <tag k="highway" v="track"/>
-    <tag k="bridge" v="yes"/>
-  </element><element caption="grade3 tunnel">
-    <id>62</id>
-    <type>line</type>
-    <tag k="tracktype" v="grade3"/>
-    <tag k="highway" v="track"/>
-    <tag k="tunnel" v="yes"/>
-  </element></line>
-  <line><element caption="grade4 track">
-    <id>63</id>
-    <type>line</type>
-    <tag k="tracktype" v="grade4"/>
-    <tag k="highway" v="track"/>
-  </element><element caption="grade4 bridge">
-    <id>64</id>
-    <type>line</type>
-    <tag k="tracktype" v="grade4"/>
-    <tag k="highway" v="track"/>
-    <tag k="bridge" v="yes"/>
-  </element><element caption="grade4 tunnel">
-    <id>65</id>
-    <type>line</type>
-    <tag k="tracktype" v="grade4"/>
-    <tag k="highway" v="track"/>
-    <tag k="tunnel" v="yes"/>
-  </element></line>
-  <line><element caption="grade5 track">
-    <id>66</id>
-    <type>line</type>
-    <tag k="tracktype" v="grade5"/>
-    <tag k="highway" v="track"/>
-  </element><element caption="grade5 bridge">
-    <id>67</id>
-    <type>line</type>
-    <tag k="tracktype" v="grade5"/>
-    <tag k="highway" v="track"/>
-    <tag k="bridge" v="yes"/>
-  </element><element caption="grade5 tunnel">
-    <id>68</id>
-    <type>line</type>
-    <tag k="tracktype" v="grade5"/>
-    <tag k="highway" v="track"/>
-    <tag k="tunnel" v="yes"/>
-  </element></line>
-  <line><element caption="unsurfaced">
-    <id>69</id>
-    <type>line</type>
-    <tag k="highway" v="unsurfaced"/>
-  </element><element caption="unsurfaced bridge">
-    <id>70</id>
-    <type>line</type>
-    <tag k="highway" v="unsurfaced"/>
-    <tag k="bridge" v="yes"/>
-  </element><element caption="unsurfaced tunnel">
-    <id>71</id>
-    <type>line</type>
-    <tag k="highway" v="unsurfaced"/>
-    <tag k="tunnel" v="yes"/>
-  </element></line>
-  <line><element caption="path">
-    <id>72</id>
-    <type>line</type>
-    <tag k="highway" v="path"/>
-  </element><element caption="path bridge">
-    <id>73</id>
-    <type>line</type>
-    <tag k="highway" v="path"/>
-    <tag k="bridge" v="yes"/>
-  </element><element caption="path tunnel">
-    <id>74</id>
-    <type>line</type>
-    <tag k="highway" v="path"/>
-    <tag k="tunnel" v="yes"/>
-  </element></line>
+  <line>
+    <element caption="grade1 track">
+      <id>54</id>
+      <type>line</type>
+      <tag k="tracktype" v="grade1"/>
+      <tag k="highway" v="track"/>
+    </element>
+    <element caption="bridge">
+      <id>55</id>
+      <type>line</type>
+      <tag k="tracktype" v="grade1"/>
+      <tag k="highway" v="track"/>
+      <tag k="bridge" v="yes"/>
+    </element>
+    <element caption="tunnel">
+      <id>56</id>
+      <type>line</type>
+      <tag k="tracktype" v="grade1"/>
+      <tag k="highway" v="track"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
+  </line>
+  <line>
+    <element caption="grade2 track">
+      <id>57</id>
+      <type>line</type>
+      <tag k="tracktype" v="grade2"/>
+      <tag k="highway" v="track"/>
+    </element>
+    <element caption="bridge">
+      <id>58</id>
+      <type>line</type>
+      <tag k="tracktype" v="grade2"/>
+      <tag k="highway" v="track"/>
+      <tag k="bridge" v="yes"/>
+    </element>
+    <element caption="tunnel">
+      <id>59</id>
+      <type>line</type>
+      <tag k="tracktype" v="grade2"/>
+      <tag k="highway" v="track"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
+  </line>
+  <line>
+    <element caption="grade3 track">
+      <id>60</id>
+      <type>line</type>
+      <tag k="tracktype" v="grade3"/>
+      <tag k="highway" v="track"/>
+    </element>
+    <element caption="bridge">
+      <id>61</id>
+      <type>line</type>
+      <tag k="tracktype" v="grade3"/>
+      <tag k="highway" v="track"/>
+      <tag k="bridge" v="yes"/>
+    </element>
+    <element caption="tunnel">
+      <id>62</id>
+      <type>line</type>
+      <tag k="tracktype" v="grade3"/>
+      <tag k="highway" v="track"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
+  </line>
+  <line>
+    <element caption="grade4 track">
+      <id>63</id>
+      <type>line</type>
+      <tag k="tracktype" v="grade4"/>
+      <tag k="highway" v="track"/>
+    </element>
+    <element caption="bridge">
+      <id>64</id>
+      <type>line</type>
+      <tag k="tracktype" v="grade4"/>
+      <tag k="highway" v="track"/>
+      <tag k="bridge" v="yes"/>
+    </element>
+    <element caption="tunnel">
+      <id>65</id>
+      <type>line</type>
+      <tag k="tracktype" v="grade4"/>
+      <tag k="highway" v="track"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
+  </line>
+  <line>
+    <element caption="grade5 track">
+      <id>66</id>
+      <type>line</type>
+      <tag k="tracktype" v="grade5"/>
+      <tag k="highway" v="track"/>
+    </element>
+    <element caption="bridge">
+      <id>67</id>
+      <type>line</type>
+      <tag k="tracktype" v="grade5"/>
+      <tag k="highway" v="track"/>
+      <tag k="bridge" v="yes"/>
+    </element>
+    <element caption="tunnel">
+      <id>68</id>
+      <type>line</type>
+      <tag k="tracktype" v="grade5"/>
+      <tag k="highway" v="track"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
+  </line>
+  <line>
+    <element caption="unsurfaced">
+      <id>69</id>
+      <type>line</type>
+      <tag k="highway" v="unsurfaced"/>
+    </element>
+    <element caption="bridge">
+      <id>70</id>
+      <type>line</type>
+      <tag k="highway" v="unsurfaced"/>
+      <tag k="bridge" v="yes"/>
+    </element>
+    <element caption="tunnel">
+      <id>71</id>
+      <type>line</type>
+      <tag k="highway" v="unsurfaced"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
+  </line>
+  <line>
+    <element caption="path">
+      <id>72</id>
+      <type>line</type>
+      <tag k="highway" v="path"/>
+    </element>
+    <element caption="bridge">
+      <id>73</id>
+      <type>line</type>
+      <tag k="highway" v="path"/>
+      <tag k="bridge" v="yes"/>
+    </element>
+    <element caption="tunnel">
+      <id>74</id>
+      <type>line</type>
+      <tag k="highway" v="path"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
+  </line>
   <element caption="raceway">
     <id>75</id>
     <type>line</type>
     <tag k="highway" v="raceway"/>
   </element>
-  
-  <line><element caption="construction motorway">
-    <id>76</id>
-    <type>line</type>
-    <tag k="highway" v="proposed"/>
-    <tag k="construction" v="motorway"/>
-  </element><element caption="construction trunk">
-    <id>77</id>
-    <type>line</type>
-    <tag k="highway" v="proposed"/>
-    <tag k="construction" v="trunk"/>
-  </element><element caption="construction">
-    <id>78</id>
-    <type>line</type>
-    <tag k="highway" v="proposed"/>
-  </element></line>
-  
-  <line><element caption="construction primary">
-    <id>79</id>
-    <type>line</type>
-    <tag k="highway" v="proposed"/>
-    <tag k="construction" v="primary"/>
-  </element><element caption="construction secondary">
-    <id>80</id>
-    <type>line</type>
-    <tag k="highway" v="proposed"/>
-    <tag k="construction" v="secondary"/>
-  </element><element caption="construction tertiary">
-    <id>81</id>
-    <type>line</type>
-    <tag k="highway" v="proposed"/>
-    <tag k="construction" v="tertiary"/>
-  </element></line>
-  
-  
+  <line>
+    <element caption="construction">
+      <id>76</id>
+      <type>line</type>
+      <tag k="highway" v="proposed"/>
+    </element>
+    <element caption="motorway">
+      <id>77</id>
+      <type>line</type>
+      <tag k="highway" v="proposed"/>
+      <tag k="construction" v="motorway"/>
+    </element>
+    <element caption="trunk">
+      <id>78</id>
+      <type>line</type>
+      <tag k="highway" v="proposed"/>
+      <tag k="construction" v="trunk"/>
+    </element>
+  </line>
+  <line>
+    <element caption="construction primary">
+      <id>79</id>
+      <type>line</type>
+      <tag k="highway" v="proposed"/>
+      <tag k="construction" v="primary"/>
+    </element>
+    <element caption="secondary">
+      <id>80</id>
+      <type>line</type>
+      <tag k="highway" v="proposed"/>
+      <tag k="construction" v="secondary"/>
+    </element>
+    <element caption="tertiary">
+      <id>81</id>
+      <type>line</type>
+      <tag k="highway" v="proposed"/>
+      <tag k="construction" v="tertiary"/>
+    </element>
+  </line>
   <element caption="construction residential, unclassified, living street, service">
-
     <id>82</id>
     <type>line</type>
     <tag k="highway" v="proposed"/>
@@ -446,7 +517,6 @@
   </element>
   <line>
     <element caption="permissive unclassified, residential or service">
-
       <id>83</id>
       <type>line</type>
       <tag k="access" v="permissive"/>
@@ -461,7 +531,6 @@
   </line>
   <line>
     <element caption="destination unclassified, residential or service">
-
       <id>85</id>
       <type>line</type>
       <tag k="access" v="destination"/>
@@ -476,54 +545,38 @@
   <line>
     <element caption="oneway">
       <id>87</id>
-      <type>line</type>
+      <type>smallline</type>
       <tag k="oneway" v="yes"/>
       <tag k="highway" v="unclassified"/>
-    </element><element caption="traffic_signals">
-    <id>88</id>
-    <type>point</type>
-    <tag k="highway" v="traffic_signals"/>
-  </element>
+    </element>
+    <element caption="traffic_signals">
+      <id>88</id>
+      <type>point</type>
+      <tag k="highway" v="traffic_signals"/>
+    </element>
+    <element caption="mini_roundabout">
+      <id>89</id>
+      <type>point</type>
+      <tag k="highway" v="mini_roundabout"/>
+    </element>
   </line>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-
-
-
   </title></page>
   <page>Public transportation 
   <title name="railroad">Railroad 
-  <element caption="rail">
-    <id>89</id>
-    <type>line</type>
-    <tag k="railway" v="rail"/>
-  </element>
   <line>
-    <element caption="rail bridge">
+    <element caption="rail">
       <id>90</id>
+      <type>line</type>
+      <tag k="railway" v="rail"/>
+    </element>
+    <element caption="bridge">
+      <id>91</id>
       <type>line</type>
       <tag k="railway" v="rail"/>
       <tag k="bridge" v="yes"/>
     </element>
-    <element caption="rail tunnel">
-      <id>91</id>
+    <element caption="tunnel">
+      <id>92</id>
       <type>line</type>
       <tag k="railway" v="rail"/>
       <tag k="tunnel" v="yes"/>
@@ -531,221 +584,242 @@
   </line>
   <line>
     <element caption="station">
-      <id>92</id>
+      <id>93</id>
       <type>pointtext</type>
       <tag k="railway" v="station"/>
     </element>
     <element caption="station">
-      <id>93</id>
+      <id>94</id>
       <type>rectanglepoint</type>
       <tag k="railway" v="station"/>
     </element>
   </line>
   <line>
     <element caption="platform">
-      <id>94</id>
+      <id>95</id>
       <type>rectangle</type>
       <tag k="highway" v="platform"/>
     </element>
     <element caption="platform">
-      <id>95</id>
+      <id>96</id>
       <type>line</type>
       <tag k="highway" v="platform"/>
     </element>
   </line>
   <element caption="level_crossing">
-    <id>96</id>
+    <id>97</id>
     <type>point</type>
     <tag k="railway" v="level_crossing"/>
   </element>
   <line>
       <element caption="light_rail">
-      <id>97</id>
-      <type>line</type>
-      <tag k="railway" v="light_rail"/>
-    </element>
-    <element caption="light_rail tunnel">
       <id>98</id>
       <type>line</type>
       <tag k="railway" v="light_rail"/>
-      <tag k="tunnel" v="yes"/>
     </element>
-    <element caption="light_rail">
+    <element caption="bridge">
       <id>99</id>
       <type>line</type>
-      <tag k="railway" v="light_rail bridge"/>
+      <tag k="railway" v="light_rail"/>
       <tag k="bridge" v="yes"/>
     </element>
+    <element caption="tunnel">
+      <id>100</id>
+      <type>line</type>
+      <tag k="railway" v="light_rail"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
   </line>
-  <element caption="narrow_gauge">
-    <id>100</id>
-    <type>line</type>
-    <tag k="railway" v="narrow_gauge"/>
-  </element>
   <line>
-    <element caption="narrow_gauge tunnel">
+    <element caption="narrow_gauge">
       <id>101</id>
       <type>line</type>
       <tag k="railway" v="narrow_gauge"/>
-      <tag k="tunnel" v="yes"/>
     </element>
-    <element caption="narrow_gauge bridge">
+    <element caption="bridge">
       <id>102</id>
       <type>line</type>
       <tag k="railway" v="narrow_gauge"/>
       <tag k="bridge" v="yes"/>
     </element>
+    <element caption="tunnel">
+      <id>103</id>
+      <type>line</type>
+      <tag k="railway" v="narrow_gauge"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
   </line>
-  <element caption="funicular">
-    <id>103</id>
-    <type>line</type>
-    <tag k="railway" v="funicular"/>
-  </element>
   <line>
-    <element caption="funicular tunnel">
+    <element caption="funicular">
       <id>104</id>
       <type>line</type>
       <tag k="railway" v="funicular"/>
-      <tag k="tunnel" v="yes"/>
     </element>
-    <element caption="funicular bridge">
+    <element caption="bridge">
       <id>105</id>
       <type>line</type>
       <tag k="railway" v="funicular"/>
       <tag k="bridge" v="yes"/>
     </element>
+    <element caption="tunnel">
+      <id>106</id>
+      <type>line</type>
+      <tag k="railway" v="funicular"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
   </line>
   <element caption="monorail">
-    <id>106</id>
+    <id>107</id>
     <type>line</type>
     <tag k="railway" v="monorail"/>
   </element>
   <element caption="preserved">
-    <id>107</id>
+    <id>108</id>
     <type>line</type>
     <tag k="railway" v="preserved"/>
   </element>
   <element caption="spur, siding, yard">
-    <id>108</id>
+    <id>109</id>
     <type>line</type>
     <tag k="railway" v="spur"/>
   </element>
   <element caption="station disused">
-    <id>109</id>
+    <id>110</id>
     <type>pointtext</type>
     <tag k="railway" v="station"/>
     <tag k="disused" v="yes"/>
-  </element></title>
+  </element>
+  </title>
   <title name="other">Other 
   <line>
     <element caption="parking">
-      <id>110</id>
+      <id>111</id>
+      <type>rectanglepoint</type>
+      <tag k="amenity" v="parking"/>
+    </element>
+    <element caption="parking">
+      <id>112</id>
       <type>point</type>
       <tag k="amenity" v="parking"/>
     </element>
     <element caption="parking access">
-      <id>111</id>
+      <id>113</id>
       <type>point</type>
       <tag k="amenity" v="parking"/>
       <tag k="access" v="something"/>
     </element>
-    <element caption="parking">
-      <id>112</id>
-      <type>rectanglepoint</type>
-      <tag k="amenity" v="parking"/>
+  </line>
+  <line>
+    <element caption="car_sharing">
+      <id>114</id>
+      <type>point</type>
+      <tag k="amenity" v="car_sharing"/>
+    </element>
+    <element caption="bicycle_rental">
+      <id>115</id>
+      <type>point</type>
+      <tag k="amenity" v="bicycle_rental"/>
     </element>
   </line>
-  <element caption="car_sharing">
-    <id>113</id>
-    <type>point</type>
-    <tag k="amenity" v="car_sharing"/>
-  </element>
-  <element caption="bicycle_rental">
-    <id>114</id>
-    <type>point</type>
-    <tag k="amenity" v="bicycle_rental"/>
-  </element>
   <line>
     <element caption="bus_stop">
-      <id>115</id>
+      <id>116</id>
       <type>point</type>
       <tag k="amenity" v="bus_stop"/>
     </element>
     <element caption="bus_station">
-      <id>116</id>
+      <id>117</id>
       <type>point</type>
       <tag k="amenity" v="bus_station"/>
     </element>
   </line>
   <element caption="halt">
-    <id>117</id>
+    <id>118</id>
     <type>pointtext</type>
     <tag k="railway" v="halt"/>
   </element>
   <line>
     <element caption="tram">
-      <id>118</id>
-      <type>line</type>
-      <tag k="railway" v="tram"/>
-    </element>
-    <element caption="tram tunnel">
       <id>119</id>
       <type>line</type>
       <tag k="railway" v="tram"/>
-      <tag k="tunnel" v="yes"/>
     </element>
     <element caption="bridge">
       <id>120</id>
       <type>line</type>
-      <tag k="railway" v="tram bridge"/>
+      <tag k="railway" v="tram"/>
       <tag k="bridge" v="yes"/>
     </element>
-    
+    <element caption="tunnel">
+      <id>121</id>
+      <type>line</type>
+      <tag k="railway" v="tram"/>
+      <tag k="tunnel" v="yes"/>
+    </element>
   </line>
   <line>
     <element caption="subway">
-      <id>121</id>
+      <id>122</id>
       <type>line</type>
       <tag k="railway" v="subway"/>
     </element>
     <element caption="bridge">
-      <id>122</id>
+      <id>123</id>
       <type>line</type>
       <tag k="railway" v="subway"/>
       <tag k="bridge" v="yes"/>
     </element>
     <element caption="tunnel">
-      <id>123</id>
+      <id>124</id>
       <type>line</type>
       <tag k="railway" v="subway"/>
       <tag k="tunnel" v="yes"/>
     </element>
   </line>
-  <element caption="airport">
-    <id>124</id>
-    <type>pointtext</type>
-    <tag k="aeroway" v="airport"/>
-  </element>
+  <line>
+    <element caption="airport">
+      <id>125</id>
+      <type>pointtext</type>
+      <tag k="aeroway" v="airport"/>
+    </element>
+      <element caption="airport">
+      <id>126</id>
+      <type>rectanglepoint</type>
+      <tag k="aeroway" v="airport"/>
+    </element>
+  </line>
+  <line>
+    <element caption="aerodrome">
+      <id>127</id>
+      <type>pointtext</type>
+      <tag k="aeroway" v="aerodrome"/>
+    </element>
+    <element caption="aerodrome">
+      <id>128</id>
+      <type>rectanglepoint</type>
+      <tag k="aeroway" v="aerodrome"/>
+    </element>
+  </line>
   <line>
     <element caption="terminal">
-      <id>125</id>
+      <id>129</id>
       <type>rectangle</type>
       <tag k="aeroway" v="terminal"/>
     </element>
     <element caption="apron">
-      <id>126</id>
+      <id>130</id>
       <type>rectangle</type>
       <tag k="aeroway" v="apron"/>
     </element>
   </line>
   <line>
     <element caption="runway">
-      <id>127</id>
+      <id>131</id>
       <type>line</type>
       <tag k="aeroway" v="runway"/>
     </element>
     <element caption="runway bridge">
-      <id>128</id>
+      <id>132</id>
       <type>line</type>
       <tag k="aeroway" v="runway"/>
       <tag k="bridge" v="yes"/>
@@ -753,142 +827,130 @@
   </line>
   <line>
     <element caption="taxiway">
-      <id>129</id>
+      <id>133</id>
       <type>line</type>
       <tag k="aeroway" v="taxiway"/>
     </element>
     <element caption="taxiway bridge">
-      <id>130</id>
+      <id>134</id>
       <type>line</type>
       <tag k="aeroway" v="taxiway"/>
       <tag k="bridge" v="yes"/>
     </element>
   </line>
   <line>
-    <element caption="aerodrome">
-      <id>131</id>
-      <type>rectangle</type>
-      <tag k="aeroway" v="aerodrome"/>
-    </element>
-    <element caption="aerodrome">
-      <id>132</id>
-      <type>pointtext</type>
-      <tag k="aeroway" v="aerodrome"/>
-    </element>
-  </line>
-  <line>
     <element caption="cable_car, gondola">
-      <id>133</id>
+      <id>135</id>
       <type>line</type>
       <tag k="aerialway" v="cable_car"/>
     </element>
     <element caption="chair_lift, drag_lift">
-      <id>134</id>
+      <id>136</id>
       <type>line</type>
       <tag k="aerialway" v="chair_lift"/>
     </element>
-  </line></title></page>
+  </line>
+  </title>
+  </page>
   <page>Administrative 
   <title name="places">Places 
   <element caption="country">
-    <id>135</id>
+    <id>137</id>
     <type>pointtext</type>
     <tag k="place" v="country"/>
   </element>
   <element caption="state">
-    <id>136</id>
+    <id>138</id>
     <type>pointtext</type>
     <tag k="place" v="state"/>
   </element>
   <element caption="island">
-    <id>137</id>
+    <id>139</id>
     <type>pointtext</type>
     <tag k="place" v="island"/>
     <tag k="amenity" v="something"/>
   </element>
   <element caption="metropolis">
-    <id>138</id>
+    <id>140</id>
     <type>pointtext</type>
     <tag k="place" v="metropolis"/>
   </element>
   <element caption="city">
-    <id>139</id>
+    <id>141</id>
     <type>pointtext</type>
     <tag k="place" v="city"/>
   </element>
-  <element caption="town, large_town, small_town">
-    <id>140</id>
+  <element caption="town">
+    <id>142</id>
     <type>pointtext</type>
     <tag k="place" v="town"/>
   </element>
   <element caption="suburb">
-    <id>141</id>
+    <id>143</id>
     <type>pointtext</type>
     <tag k="place" v="suburb"/>
   </element>
-  <element caption="village, large_village">
-    <id>142</id>
+  <element caption="village">
+    <id>144</id>
     <type>pointtext</type>
     <tag k="place" v="village"/>
   </element>
   <element caption="hamlet, locality">
-    <id>143</id>
+    <id>145</id>
     <type>pointtext</type>
     <tag k="place" v="hamlet"/>
   </element></title>
   <title name="boundaries">Administrative boundary 
-  <element caption="administrative level 2">
-    <id>144</id>
+  <element caption="administrative 2">
+    <id>146</id>
     <type>line</type>
     <tag k="admin_level" v="2"/>
     <tag k="boundary" v="administrative"/>
     <tag k="adm" v="0"/>
   </element>
-  <element caption="administrative level 3">
-    <id>145</id>
+  <element caption="administrative 3">
+    <id>147</id>
     <type>line</type>
     <tag k="admin_level" v="3"/>
     <tag k="boundary" v="administrative"/>
     <tag k="adm" v="0"/>
   </element>
-  <element caption="administrative level 4">
-    <id>146</id>
+  <element caption="administrative 4">
+    <id>148</id>
     <type>line</type>
     <tag k="admin_level" v="4"/>
     <tag k="boundary" v="administrative"/>
     <tag k="adm" v="0"/>
   </element>
-  <element caption="administrative level 5">
-    <id>147</id>
+  <element caption="administrative 5">
+    <id>149</id>
     <type>line</type>
     <tag k="admin_level" v="5"/>
     <tag k="boundary" v="administrative"/>
     <tag k="adm" v="5"/>
   </element>
-  <element caption="administrative level 6">
-    <id>148</id>
+  <element caption="administrative 6">
+    <id>150</id>
     <type>line</type>
     <tag k="admin_level" v="6"/>
     <tag k="boundary" v="administrative"/>
     <tag k="adm" v="5"/>
   </element>
-  <element caption="administrative level 8, administrative level 7">
-
-    <id>149</id>
+  <element caption="administrative 8, 7">
+    <id>151</id>
     <type>line</type>
     <tag k="admin_level" v="8"/>
     <tag k="boundary" v="administrative"/>
     <tag k="adm" v="5"/>
   </element>
-  <element caption="administrative level 10, administrative level 9">
-
-    <id>150</id>
+  <element caption="administrative 10, 9">
+    <id>152</id>
     <type>line</type>
     <tag k="admin_level" v="10"/>
     <tag k="boundary" v="administrative"/>
   </element>
   <element caption="administrative">
-    <id>151</id>
+    <id>153</id>
     <type>line</type>
     <tag k="boundary" v="administrative"/>
   </element></title></page>
@@ -896,129 +958,121 @@
   <title name="POI">Point of interest 
   <line>
     <element caption="alpine_hut">
-      <id>152</id>
+      <id>154</id>
       <type>point</type>
       <tag k="tourism" v="alpine_hut"/>
     </element>
     <element caption="shelter">
-      <id>153</id>
+      <id>155</id>
       <type>point</type>
       <tag k="amenity" v="shelter"/>
     </element>
   </line>
   <line>
     <element caption="viewpoint">
-      <id>154</id>
+      <id>156</id>
       <type>point</type>
       <tag k="tourism" v="viewpoint"/>
     </element>
-    <element caption="peak| name">
-      <id>155</id>
+    <element caption="peak">
+      <id>157</id>
       <type>pointtext</type>
       <tag k="natural" v="peak"/>
     </element>
   </line>
   <line>
     <element caption="cliff">
-      <id>156</id>
+      <id>158</id>
       <type>line</type>
       <tag k="natural" v="cliff"/>
     </element>
     <element caption="cave entrance">
-      <id>157</id>
+      <id>159</id>
       <type>pointtext</type>
       <tag k="natural" v="cave_entrance"/>
     </element>
   </line>
   <line>
     <element caption="water_tower">
-      <id>158</id>
+      <id>160</id>
       <type>point</type>
       <tag k="man_made" v="water_tower"/>
     </element>
+    <element caption="lighthouse">
+      <id>161</id>
+      <type>pointtext</type>
+      <tag k="man_made" v="lighthouse"/>
+    </element>
+  </line>
+  <line>
+    <element caption="power_wind">
+      <id>162</id>
+      <type>point</type>
+      <tag k="man_made" v="power_wind"/>
+    </element>
     <element caption="windmill">
-      <id>159</id>
+      <id>163</id>
       <type>pointtext</type>
       <tag k="man_made" v="windmill"/>
     </element>
   </line>
-  <element caption="power_wind&quot;">
-    <id>160</id>
-    <type>point</type>
-    <tag k="man_made" v="power_wind"/>
-  </element>
-  <element caption="lighthouse">
-    <id>161</id>
-    <type>pointtext</type>
-    <tag k="man_made" v="lighthouse"/>
-  </element>
   <line>
     <element caption="mast">
-      <id>162</id>
+      <id>164</id>
       <type>point</type>
       <tag k="man_made" v="mast"/>
     </element>
     <element caption="bollard">
-      <id>163</id>
+      <id>165</id>
       <type>point</type>
       <tag k="barrier" v="bollard"/>
     </element>
   </line>
   <line>
-    <element caption="gate road, gate">
-      <id>164</id>
+    <element caption="gate">
+      <id>166</id>
       <type>point</type>
       <tag k="highway" v="gate"/>
     </element>
     <element caption="lift_gate">
-      <id>165</id>
+      <id>167</id>
       <type>point</type>
       <tag k="barrier" v="lift_gate"/>
     </element>
   </line>
   <line>
     <element caption="hedge">
-      <id>166</id>
-      <type>line</type>
+      <id>168</id>
+      <type>smallline</type>
       <tag k="natural" v="hedge"/>
     </element>
     <element caption="barrier">
-      <id>167</id>
-      <type>line</type>
-      <tag k="barrier" v="something"/>
+      <id>169</id>
+      <type>smallline</type>
+      <tag k="barrier" v="yes"/>
     </element>
   </line>
-  <element caption="mini_roundabout">
-    <id>168</id>
-    <type>point</type>
-    <tag k="highway" v="mini_roundabout"/>
-  </element>
   <line>
     <element caption="spring">
-      <id>169</id>
+      <id>170</id>
       <type>point</type>
       <tag k="natural" v="spring"/>
     </element>
     <element caption="tree">
-      <id>170</id>
+      <id>171</id>
       <type>point</type>
       <tag k="natural" v="tree"/>
     </element>
   </line>
   <element caption="memorial">
-    <id>171</id>
+    <id>172</id>
     <type>point</type>
     <tag k="historic" v="memorial"/>
   </element>
   <element caption="building">
-    <id>172</id>
-    <type>rectangle</type>
-    <tag k="building" v="yes"/>
-  </element>
-  <element caption="supermarket">
     <id>173</id>
     <type>rectangle</type>
-    <tag k="building" v="supermarket"/>
+    <tag k="building" v="yes"/>
   </element>
   <line>
     <element caption="place_of_worship">
@@ -1026,7 +1080,7 @@
       <type>pointtext</type>
       <tag k="amenity" v="place_of_worship"/>
     </element>
-    <element caption="place_of_worship">
+    <element caption=" ">
       <id>175</id>
       <type>rectanglepoint</type>
       <tag k="amenity" v="place_of_worship"/>
@@ -1039,7 +1093,7 @@
       <tag k="amenity" v="place_of_worship"/>
       <tag k="religion" v="christian"/>
     </element>
-    <element caption="place_of_worship, jewish">
+    <element caption="jewish">
       <id>177</id>
       <type>point</type>
       <tag k="amenity" v="place_of_worship"/>
@@ -1053,7 +1107,7 @@
       <tag k="amenity" v="place_of_worship"/>
       <tag k="religion" v="muslim"/>
     </element>
-    <element caption="place_of_worship, sikh">
+    <element caption="sikh">
       <id>179</id>
       <type>point</type>
       <tag k="amenity" v="place_of_worship"/>
@@ -1080,7 +1134,7 @@
       <tag k="landuse" v="cemetery"/>
       <tag k="religion" v="jewish"/>
     </element>
-    <element caption="cemetery, christian">
+    <element caption="christian">
       <id>183</id>
       <type>rectangle</type>
       <tag k="landuse" v="cemetery"/>
@@ -1112,22 +1166,22 @@
       <tag k="amenity" v="emergency_phone"/>
     </element>
   </line>
-  <element caption="pharmacy">
-    <id>188</id>
-    <type>point</type>
-    <tag k="amenity" v="pharmacy"/>
-  </element>
   <line>
-    <element caption="university, college, school, hospital, kindergarten">
-
+    <element caption="pharmacy">
+      <id>188</id>
+      <type>point</type>
+      <tag k="amenity" v="pharmacy"/>
+    </element>
+    <element caption="hospital">
       <id>189</id>
-      <type>rectangle</type>
+      <type>pointtext</type>
       <tag k="amenity" v="hospital"/>
     </element>
     <element caption="hospital">
       <id>190</id>
-      <type>pointtext</type>
+      <type>rectanglepoint</type>
       <tag k="amenity" v="hospital"/>
+      <tag k="building" v="yes"/>
     </element>
   </line>
   <element caption="embassy">
@@ -1171,7 +1225,7 @@
       <tag k="amenity" v="cafe"/>
     </element>
   </line>
-  <element caption="fast food">
+  <element caption="fast_food">
     <id>198</id>
     <type>point</type>
     <tag k="amenity" v="fast_food"/>
@@ -1196,137 +1250,135 @@
       <tag k="amenity" v="something"/>
     </element>
   </line>
+  <element caption="camp_site, caravan_site, picnic_site">
+    <id>202</id>
+    <type>rectangle</type>
+    <tag k="tourism" v="camp_site"/>
+  </element>
   <line>
     <element caption="camp_site, caravan_site, picnic_site">
-      <id>202</id>
-      <type>rectangle</type>
-      <tag k="tourism" v="camp_site"/>
+      <id>203</id>
+      <type>point</type>
+      <tag k="tourism" v="picnic_site"/>
     </element>
     <element caption="caravan_site">
-      <id>203</id>
+      <id>204</id>
       <type>point</type>
       <tag k="tourism" v="caravan_site"/>
     </element>
     <element caption="camp_site">
-      <id>204</id>
+      <id>205</id>
       <type>point</type>
       <tag k="tourism" v="camp_site"/>
     </element>
   </line>
   <line>
     <element caption="museum">
-      <id>205</id>
+      <id>206</id>
       <type>point</type>
       <tag k="tourism" v="museum"/>
     </element>
     <element caption="theatre">
-      <id>206</id>
+      <id>207</id>
       <type>point</type>
       <tag k="amenity" v="theatre"/>
     </element>
     <element caption="cinema">
-      <id>207</id>
+      <id>208</id>
       <type>point</type>
       <tag k="amenity" v="cinema"/>
     </element>
   </line>
   <line>
     <element caption="toilets">
-      <id>208</id>
+      <id>209</id>
       <type>point</type>
       <tag k="amenity" v="toilets"/>
     </element>
     <element caption="drinking_water">
-      <id>209</id>
+      <id>210</id>
       <type>point</type>
       <tag k="amenity" v="drinking_water"/>
     </element>
   </line>
   <line>
     <element caption="post_office">
-      <id>210</id>
+      <id>211</id>
       <type>point</type>
       <tag k="amenity" v="post_office"/>
     </element>
     <element caption="post_box">
-      <id>211</id>
+      <id>212</id>
       <type>point</type>
       <tag k="amenity" v="post_box"/>
     </element>
   </line>
   <element caption="fuel">
-    <id>212</id>
+    <id>213</id>
     <type>point</type>
     <tag k="amenity" v="fuel"/>
   </element>
   <element caption="recycling">
-    <id>213</id>
+    <id>214</id>
     <type>point</type>
     <tag k="amenity" v="recycling"/>
   </element>
   <element caption="prison">
-    <id>214</id>
+    <id>215</id>
     <type>point</type>
     <tag k="amenity" v="prison"/>
   </element>
   <element caption="library">
-    <id>215</id>
+    <id>216</id>
     <type>point</type>
     <tag k="amenity" v="library"/>
   </element>
   <line>
     <element caption="education">
-      <id>216</id>
+      <id>217</id>
       <type>rectangle</type>
       <tag k="amenity" v="university"/>
     </element>
     <element caption="university">
-      <id>217</id>
+      <id>218</id>
       <type>pointtext</type>
       <tag k="amenity" v="university"/>
     </element>
   </line>
   <line>
     <element caption="school, college">
-      <id>218</id>
+      <id>219</id>
       <type>pointtext</type>
       <tag k="amenity" v="school"/>
     </element>
     <element caption="kindergarten">
-      <id>219</id>
+      <id>220</id>
       <type>pointtext</type>
       <tag k="amenity" v="kindergarten"/>
     </element>
   </line>
   <line>
     <element caption="supermarket">
-      <id>220</id>
-      <type>rectangle</type>
+      <id>221</id>
+      <type>rectanglepoint</type>
       <tag k="building" v="supermarket"/>
     </element>
     <element caption="supermarket">
-      <id>221</id>
+      <id>222</id>
       <type>point</type>
       <tag k="shop" v="supermarket"/>
     </element>
   </line>
   <line>
     <element caption="bakery">
-      <id>222</id>
+      <id>223</id>
       <type>point</type>
       <tag k="shop" v="bakery"/>
     </element>
     <element caption="butcher">
-      <id>223</id>
-      <type>point</type>
-      <tag k="shop" v="butcher"/>
-    </element>
-  </line>
-  <line>
-    <element caption="clothes, fashion">
       <id>224</id>
       <type>point</type>
-      <tag k="shop" v="clothes"/>
+      <tag k="shop" v="butcher"/>
     </element>
     <element caption="convenience">
       <id>225</id>
@@ -1335,367 +1387,400 @@
     </element>
   </line>
   <line>
-    <element caption="department_store">
+    <element caption="clothes, fashion">
       <id>226</id>
+      <type>point</type>
+      <tag k="shop" v="clothes"/>
+    </element>
+    <element caption="department_store">
+      <id>227</id>
       <type>point</type>
       <tag k="shop" v="department_store"/>
     </element>
     <element caption="doityourself">
-      <id>227</id>
+      <id>228</id>
       <type>point</type>
       <tag k="shop" v="doityourself"/>
     </element>
   </line>
   <element caption="hairdresser">
-    <id>228</id>
+    <id>229</id>
     <type>point</type>
     <tag k="shop" v="hairdresser"/>
   </element>
-  <element caption="sports_centre, stadium">
-    <id>229</id>
-    <type>rectangle</type>
-    <tag k="leisure" v="sports_centre"/>
-  </element>
   <line>
-    <element caption="track">
+    <element caption="garden">
       <id>230</id>
       <type>rectangle</type>
-      <tag k="leisure" v="track"/>
-    </element>
-    <element caption="pitch">
-      <id>231</id>
-      <type>rectangle</type>
-      <tag k="leisure" v="pitch"/>
-    </element>
-  </line>
-  <element caption="playground">
-    <id>232</id>
-    <type>rectangle</type>
-    <tag k="leisure" v="playground"/>
-  </element>
-  <line>
-    <element caption="attraction">
-      <id>233</id>
-      <type>rectangle</type>
-      <tag k="tourism" v="attraction"/>
+      <tag k="leisure" v="garden"/>
     </element>
     <element caption="park">
-      <id>234</id>
+      <id>231</id>
       <type>rectangle</type>
       <tag k="leisure" v="park"/>
     </element>
   </line>
   <line>
-    <element caption="zoo">
-      <id>235</id>
-      <type>rectangle</type>
-      <tag k="tourism" v="zoo"/>
-    </element>
-    <element caption="garden">
-      <id>236</id>
-      <type>rectangle</type>
-      <tag k="leisure" v="garden"/>
-    </element>
-  </line>
-  <line>
-    <element caption="golf_course">
-      <id>237</id>
-      <type>rectangle</type>
-      <tag k="leisure" v="golf_course"/>
-    </element>
-    <element caption="recreation_ground">
-      <id>238</id>
-      <type>rectangle</type>
-      <tag k="landuse" v="recreation_ground"/>
-    </element>
-    <element caption="conservation">
-      <id>239</id>
-      <type>rectangle</type>
-      <tag k="landuse" v="conservation"/>
-    </element>
-  </line>
-  <line>
     <element caption="village_green">
-      <id>240</id>
+      <id>232</id>
       <type>rectangle</type>
       <tag k="landuse" v="village_green"/>
     </element>
-    <element caption="allotments">
-      <id>241</id>
+    <element caption="common">
+      <id>233</id>
       <type>rectangle</type>
-      <tag k="landuse" v="allotments"/>
+      <tag k="leisure" v="common"/>
     </element>
   </line>
   <line>
+    <element caption="playground">
+      <id>234</id>
+      <type>rectangle</type>
+      <tag k="leisure" v="playground"/>
+    </element>
+    <element caption="recreation_ground">
+      <id>235</id>
+      <type>rectangle</type>
+      <tag k="landuse" v="recreation_ground"/>
+    </element>
+  </line>
+  <line>
+    <element caption="sports_centre, stadium">
+      <id>236</id>
+      <type>rectangle</type>
+      <tag k="leisure" v="sports_centre"/>
+    </element>
+    <element caption="track">
+      <id>237</id>
+      <type>rectangle</type>
+      <tag k="leisure" v="track"/>
+    </element>
+    <element caption="pitch">
+      <id>238</id>
+      <type>rectangle</type>
+      <tag k="leisure" v="pitch"/>
+    </element>
+  </line>
+    <element caption="golf_course">
+    <id>239</id>
+    <type>rectangle</type>
+    <tag k="leisure" v="golf_course"/>
+  </element>
+  <line>
+    <element caption="attraction">
+      <id>240</id>
+      <type>rectangle</type>
+      <tag k="tourism" v="attraction"/>
+    </element>
+    <element caption="zoo">
+      <id>241</id>
+      <type>rectangle</type>
+      <tag k="tourism" v="zoo"/>
+    </element>
+  </line>
+  <element caption="conservation">
+    <id>242</id>
+    <type>rectangle</type>
+    <tag k="landuse" v="conservation"/>
+  </element>
+  <element caption="residential">
+    <id>243</id>
+    <type>rectangle</type>
+    <tag k="landuse" v="residential"/>
+  </element>
+  <element caption="allotments">
+    <id>244</id>
+    <type>rectangle</type>
+    <tag k="landuse" v="allotments"/>
+  </element>
+  <line>
     <element caption="commercial">
-      <id>242</id>
+      <id>245</id>
       <type>rectangle</type>
       <tag k="landuse" v="commercial"/>
     </element>
     <element caption="retail">
-      <id>243</id>
+      <id>246</id>
       <type>rectangle</type>
       <tag k="landuse" v="retail"/>
     </element>
   </line>
   <line>
     <element caption="industrial, railway">
-      <id>244</id>
+      <id>247</id>
       <type>rectangle</type>
       <tag k="landuse" v="industrial"/>
     </element>
   </line>
   <line>
     <element caption="barracks">
-      <id>245</id>
+      <id>248</id>
       <type>rectangle</type>
       <tag k="military" v="barracks"/>
     </element>
     <element caption="danger_area">
-      <id>246</id>
+      <id>249</id>
       <type>rectangle</type>
       <tag k="military" v="danger_area"/>
     </element>
   </line>
   <line>
+    <element caption="power line">
+      <id>250</id>
+      <type>line</type>
+      <tag k="power" v="line"/>
+    </element>
+    <element caption="tower">
+      <id>251</id>
+      <type>point</type>
+      <tag k="power" v="tower"/>
+    </element>
+  </line>
+  <line>
     <element caption="power_station">
-      <id>247</id>
-      <type>rectangle</type>
+      <id>252</id>
+      <type>rectanglepoint</type>
       <tag k="power" v="station"/>
     </element>
     <element caption="sub_station">
-      <id>248</id>
-      <type>rectangle</type>
+      <id>253</id>
+      <type>rectanglepoint</type>
       <tag k="power" v="sub_station"/>
     </element>
-  </line></title></page>
+  </line>
+  </title>
+  </page>
   <page>Land 
   <title name="land">Land 
   <line>
     <element caption="forest">
-      <id>249</id>
+      <id>254</id>
       <type>rectangle</type>
       <tag k="landuse" v="forest"/>
     </element>
     <element caption="wood">
-      <id>250</id>
+      <id>255</id>
       <type>rectangle</type>
       <tag k="natural" v="wood"/>
     </element>
   </line>
   <element caption="nature_reserve">
-    <id>251</id>
+    <id>256</id>
     <type>rectangle</type>
     <tag k="leisure" v="nature_reserve"/>
   </element>
   <line>
     <element caption="vineyard">
-      <id>252</id>
+      <id>257</id>
       <type>rectangle</type>
       <tag k="landuse" v="vineyard"/>
     </element>
     <element caption="orchard">
-      <id>253</id>
+      <id>258</id>
       <type>rectangle</type>
       <tag k="landuse" v="orchard"/>
     </element>
   </line>
   <element caption="meadow, grass">
-    <id>254</id>
+    <id>259</id>
     <type>rectangle</type>
     <tag k="landuse" v="meadow"/>
   </element>
-  <element caption="heath">
-    <id>255</id>
-    <type>rectangle</type>
-    <tag k="natural" v="heath"/>
-  </element>
-  <element caption="field, field">
-    <id>256</id>
+  <line>
+    <element caption="scrub">
+      <id>260</id>
+      <type>rectangle</type>
+      <tag k="natural" v="scrub"/>
+    </element>
+    <element caption="heath">
+      <id>261</id>
+      <type>rectangle</type>
+      <tag k="natural" v="heath"/>
+    </element>
+  </line>
+  <element caption="field">
+    <id>262</id>
     <type>rectangle</type>
     <tag k="landuse" v="field"/>
   </element>
   <line>
     <element caption="farm, farmland">
-      <id>257</id>
+      <id>263</id>
       <type>rectangle</type>
       <tag k="landuse" v="farm"/>
     </element>
     <element caption="farmyard">
-      <id>258</id>
+      <id>264</id>
       <type>rectangle</type>
       <tag k="landuse" v="farmyard"/>
     </element>
   </line>
   <line>
     <element caption="residential">
-      <id>259</id>
+      <id>265</id>
       <type>rectangle</type>
       <tag k="landuse" v="residential"/>
     </element>
     <element caption="common">
-      <id>260</id>
+      <id>266</id>
       <type>rectangle</type>
       <tag k="leisure" v="common"/>
     </element>
   </line>
   <line>
     <element caption="brownfield, landfill, greenfield, construction">
-
-      <id>261</id>
+      <id>267</id>
       <type>rectangle</type>
       <tag k="landuse" v="brownfield"/>
     </element>
     <element caption="quarry">
-      <id>262</id>
+      <id>268</id>
       <type>rectangle</type>
       <tag k="landuse" v="quarry"/>
     </element>
   </line>
   <element caption="mud">
-    <id>263</id>
+    <id>269</id>
     <type>rectangle</type>
     <tag k="natural" v="mud"/>
   </element>
   <element caption="military">
-    <id>264</id>
+    <id>270</id>
     <type>rectangle</type>
     <tag k="landuse" v="military"/>
-  </element></title>
+  </element>
+  </title>
   <title name="water">Water 
   <line>
     <element caption="water">
-      <id>265</id>
+      <id>271</id>
       <type>rectangle</type>
-      <tag k="natural" v="lake"/>
+      <tag k="natural" v="water"/>
     </element>
     <element caption="land">
-      <id>266</id>
+      <id>272</id>
       <type>rectangle</type>
       <tag k="natural" v="land"/>
     </element>
   </line>
   <element caption="lake, reservoir, basin">
-    <id>267</id>
-    <type>pointtext</type>
+    <id>273</id>
+    <type>rectangletext</type>
     <tag k="natural" v="water"/>
   </element>
   <element caption="beach">
-    <id>268</id>
+    <id>274</id>
     <type>rectangle</type>
     <tag k="natural" v="beach"/>
   </element>
-  <line>
-    <element caption="dock, mill_pond, canal">
-      <id>269</id>
-      <type>rectangle</type>
-      <tag k="waterway" v="dock"/>
-    </element>
-  </line>
   <element caption="marsh, wetland">
-    <id>270</id>
+    <id>275</id>
     <type>rectangle</type>
     <tag k="natural" v="marsh"/>
   </element>
-  <element caption="scrub">
-    <id>271</id>
-    <type>rectangle</type>
-    <tag k="natural" v="scrub"/>
-  </element>
   <element caption="glacier">
-    <id>272</id>
+    <id>276</id>
     <type>rectangle</type>
     <tag k="natural" v="glacier"/>
   </element>
   <line>
     <element caption="weir">
-      <id>273</id>
+      <id>277</id>
       <type>line</type>
       <tag k="waterway" v="weir"/>
     </element>
+    <element caption="weir">
+      <id>278</id>
+      <type>line</type>
+      <tag k="waterway" v="dam"/>
+    </element>
     <element caption="ford">
-      <id>274</id>
+      <id>279</id>
       <type>point</type>
       <tag k="highway" v="ford"/>
-      <tag k="amenity" v="something"/>
     </element>
   </line>
   <line>
     <element caption="river">
-      <id>275</id>
+      <id>280</id>
       <type>line</type>
       <tag k="waterway" v="river"/>
     </element>
     <element caption="river tunnel">
-      <id>276</id>
+      <id>281</id>
       <type>line</type>
       <tag k="waterway" v="river"/>
       <tag k="tunnel" v="yes"/>
     </element>
   </line>
+  <element caption="dock, mill_pond, canal">
+    <id>282</id>
+    <type>rectangle</type>
+    <tag k="waterway" v="dock"/>
+  </element>
   <line>
     <element caption="canal">
-      <id>277</id>
+      <id>283</id>
       <type>line</type>
       <tag k="waterway" v="canal"/>
     </element>
-    <element caption="canal tunnel">
-      <id>278</id>
+    <element caption="tunnel">
+      <id>284</id>
       <type>line</type>
       <tag k="waterway" v="canal"/>
       <tag k="tunnel" v="yes"/>
     </element>
-    <element caption="canal bridge, aqueduct">
-      <id>279</id>
+    <element caption="bridge, aqueduct">
+      <id>285</id>
       <type>line</type>
       <tag k="waterway" v="canal"/>
       <tag k="bridge" v="yes"/>
     </element>
   </line>
   <element caption="lock_gate">
-    <id>280</id>
+    <id>286</id>
     <type>point</type>
     <tag k="waterway" v="lock_gate"/>
   </element>
   <line>
-    <element caption="canal lock">
-      <id>281</id>
-      <type>line</type>
+    <element caption="lock">
+      <id>287</id>
+      <type>smallline</type>
       <tag k="waterway" v="canal"/>
       <tag k="lock" v="yes"/>
     </element>
-    <element caption="derelict_canal, canal disused">
-      <id>282</id>
+    <element caption="derelict_canal">
+      <id>288</id>
       <type>line</type>
       <tag k="waterway" v="derelict_canal"/>
     </element>
   </line>
   <line>
     <element caption="stream">
-      <id>283</id>
+      <id>289</id>
       <type>line</type>
       <tag k="waterway" v="stream"/>
     </element>
     <element caption="stream tunnel">
-      <id>284</id>
+      <id>290</id>
       <type>line</type>
       <tag k="waterway" v="stream"/>
       <tag k="tunnel" v="yes"/>
     </element>
   </line>
   <element caption="spring">
-    <id>285</id>
+    <id>291</id>
     <type>pointtext</type>
     <tag k="natural" v="spring"/>
   </element>
   <line>
     <element caption="drain, ditch">
-      <id>286</id>
+      <id>292</id>
       <type>line</type>
       <tag k="waterway" v="drain"/>
     </element>
     <element caption="tunnel">
-      <id>287</id>
+      <id>293</id>
       <type>line</type>
       <tag k="waterway" v="drain"/>
       <tag k="tunnel" v="yes"/>
@@ -1703,26 +1788,28 @@
   </line>
   <line>
     <element caption="embankment">
-      <id>288</id>
+      <id>294</id>
       <type>line</type>
       <tag k="man_made" v="embankment"/>
     </element>
     <element caption="breakwater, groyne">
-      <id>289</id>
+      <id>295</id>
       <type>line</type>
       <tag k="man_made" v="breakwater"/>
     </element>
   </line>
   <line>
     <element caption="pier">
-      <id>290</id>
+      <id>296</id>
       <type>line</type>
       <tag k="man_made" v="pier"/>
     </element>
     <element caption="marina">
-      <id>291</id>
+      <id>297</id>
       <type>pointtext</type>
       <tag k="leisure" v="marina"/>
     </element>
-  </line></title></page>
+  </line>
+  </title>
+  </page>
 </legend>

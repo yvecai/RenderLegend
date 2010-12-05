@@ -32,7 +32,7 @@ imageWidth=50
 # then we'll use mapnik.load_map_from_string
 mapfile = create_legend_stylesheet(inputstylesheet)
 
-for zoom in range(1,18):
+for zoom in range(17,18):
     doc = minidom.parse('legend_compact.xml')
     elements = doc.getElementsByTagName("element")
     for e in elements:
@@ -46,73 +46,73 @@ for zoom in range(1,18):
             key=t.getAttribute("k")
             value=t.getAttribute("v")
             listTag.append(str('['+key+']=\''+value+'\''))
-            map_uri='pics2/'+str(zoom)+'-'+str(id)+'.png'
-            #we create a new element, which return its bbox
-            osmStr, bound = createOsmElement(type, listTag, zoom)
-            # create a named temporary file
-            # l.datasource = Osm(file=osmFile.name) need a file name
-            # we cannot pass a StringIO nor a string, nor a unnammed
-            # temporary file
-            osmFile = tempfile.NamedTemporaryFile(mode='w+t')
-            osmFile.write(osmStr) #write the osm file
-            osmFile.seek(0) #rewind
-            #---------------------------------------------------
-            
-            # Set up projections
-            # long/lat in degrees, aka ESPG:4326 and "WGS 84" 
-            lonlat = mapnik.Projection('+proj=longlat +datum=WGS84')
+        map_uri='pics/'+str(zoom)+'-'+str(id)+'.png'
+        #we create a new element, which return its bbox
+        osmStr, bound = createOsmElement(type, listTag, zoom)
+        # create a named temporary file
+        # l.datasource = Osm(file=osmFile.name) need a file name
+        # we cannot pass a StringIO nor a string, nor a unnammed
+        # temporary file
+        osmFile = tempfile.NamedTemporaryFile(mode='w+t')
+        osmFile.write(osmStr) #write the osm file
+        osmFile.seek(0) #rewind
+        #---------------------------------------------------
         
-            #bbbox =(lon,lat,maxlon,maxlat)
-            ratio= abs((bound[2]-bound[0])/(bound[3]-bound[1]))
-            width = imageWidth
-            height = int(width/ratio*1)+1 #+1 for highway=path does not look blurry
-            m = mapnik.Map(width,height)
-            
-            mapnik.load_map_from_string(m,mapfile)
-            m.srs = lonlat.params()
-            for l in m.layers:
-                l.datasource = Osm(file=osmFile.name)
-                l.srs = lonlat.params()
-            
-            bbox =lonlat.forward(mapnik.Envelope(mapnik.Coord(bound[0],bound[1]),\
-             mapnik.Coord(bound[2],bound[3])))
-            m.zoom_to_box(bbox)
-            
-            im = mapnik.Image(width,height)
-            
-            mapnik.render(m, im)
-            #print osmFile.read()
-            osmFile.close() # closing the datasource
+        # Set up projections
+        # long/lat in degrees, aka ESPG:4326 and "WGS 84" 
+        lonlat = mapnik.Projection('+proj=longlat +datum=WGS84')
+    
+        #bbbox =(lon,lat,maxlon,maxlat)
+        ratio= abs((bound[2]-bound[0])/(bound[3]-bound[1]))
+        width = imageWidth
+        height = int(width/ratio*1)+1 #+1 for highway=path does not look blurry
+        m = mapnik.Map(width,height)
+        
+        mapnik.load_map_from_string(m,mapfile)
+        m.srs = lonlat.params()
+        for l in m.layers:
+            l.datasource = Osm(file=osmFile.name)
+            l.srs = lonlat.params()
+        
+        bbox =lonlat.forward(mapnik.Envelope(mapnik.Coord(bound[0],bound[1]),\
+         mapnik.Coord(bound[2],bound[3])))
+        m.zoom_to_box(bbox)
+        
+        im = mapnik.Image(width,height)
+        
+        mapnik.render(m, im)
+        #print osmFile.read()
+        osmFile.close() # closing the datasource
 
-            view = im.view(0,0,width,height) # x,y,width,height
-            #print "saving ", map_uri
-            #view.save(map_uri,'png')
-            
-            #'save' the image in a string
-            imgStr=view.tostring('png')
-            
-            # reopen the saved image with PIL to count the color
-            # if 1, the pic is empty 
-            #img = Image.open(map_uri)
-            
-            # kind of StringIO() for images instead:
-            imgParser=ImageFile.Parser()
-            imgParser.feed(imgStr)
-            img = imgParser.close()
-            
-            if len(img.getcolors()) == 1:
-                print "empty file not saved", map_uri
-                #delete the pic file if empty
-                #os.remove(map_uri)
-            else:
-                # Crop the file to its smaller extent
-                # Cropping the pic allow a much concise html page formatting,
-                # use CSS for the rest
-                img256=img.convert('L')
-                imgbg=ImageChops.constant(img256,img256.getpixel((0,0)))
-                box=ImageChops.difference(img256, imgbg).getbbox()
-                out=img.crop(box)
-                print "saving ", map_uri
-                out.save(map_uri)
+        view = im.view(0,0,width,height) # x,y,width,height
+        #print "saving ", map_uri
+        #view.save(map_uri,'png')
+        
+        #'save' the image in a string
+        imgStr=view.tostring('png')
+        
+        # reopen the saved image with PIL to count the color
+        # if 1, the pic is empty 
+        #img = Image.open(map_uri)
+        
+        # kind of StringIO() for images instead:
+        imgParser=ImageFile.Parser()
+        imgParser.feed(imgStr)
+        img = imgParser.close()
+        
+        if len(img.getcolors()) == 1:
+            print "empty file not saved", map_uri
+            #delete the pic file if empty
+            #os.remove(map_uri)
+        else:
+            # Crop the file to its smaller extent
+            # Cropping the pic allow a much concise html page formatting,
+            # use CSS for the rest
+            img256=img.convert('L')
+            imgbg=ImageChops.constant(img256,img256.getpixel((0,0)))
+            box=ImageChops.difference(img256, imgbg).getbbox()
+            out=img.crop(box)
+            print "saving ", map_uri
+            out.save(map_uri)
             
 
