@@ -42,7 +42,7 @@ import StringIO
 import tempfile
 import os
 import pdb
-import xml.dom.minidom as m
+import xml.dom.minidom
 from xml.dom.minidom import getDOMImplementation
 import Image
 import ImageChops
@@ -70,7 +70,7 @@ def create_legend_stylesheet(inputstylesheet):#,outputstylesheet):
       added to the filter
     """
     
-    doc = m.parse(inputstylesheet)
+    doc = xml.dom.minidom.parseString(inputstylesheet)
     map = doc.getElementsByTagName("Map")
     layers = doc.getElementsByTagName("Layer")
     
@@ -583,11 +583,17 @@ def createOsmElement(elementType, tagList, zoom):
 def test():
     """ Called if the script is launched from command line
     """
-    renderLegendElement("osm_full.xml", 'line',\
+    renderLegendElement("osm.xml", 'line',\
      ["[highway]='primary'"],\
       18, 50, 'output.png')
 #
-def renderLegendElement(inputstylesheet, elementType, tagList, zoom, imageWidth, map_uri):
+def renderLegendElement(sourceFile, elementType, tagList, zoom, imageWidth, map_uri):
+    
+    # 'Fake' load a map to use mapnik libxml2 support for large xml files
+    mSource = mapnik.Map(1,1)
+    mapnik.load_map(mSource,sourceFile)
+    inputstylesheet=mapnik.save_map_to_string(mSource)
+    
     # the mapfile (stylesheet made only for legend element rendering
     # is returned as a string, no file is written on disk
     # then use mapnik.load_map_from_string

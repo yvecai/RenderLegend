@@ -2,12 +2,24 @@
 #__license__ = "GPL"
 __author__ = "Yves Cainaud"
 from RenderLegendElement import renderLegendElement
-import xml.dom.minidom as m
+import xml.dom.minidom
 from xml.dom.minidom import getDOMImplementation
+import os
 
-for zoom in range(1,19):
-    doc = m.parse('legend_compact.xml')
-    elements = doc.getElementsByTagName("element")
+sourceFile="osm.xml"
+legendFile='legend_compact.xml'
+imageWidth=50
+dir='pics2/'
+
+d = os.path.dirname(dir)
+if not os.path.exists(d):
+    os.makedirs(d)
+
+doc = xml.dom.minidom.parse(legendFile)
+elements = doc.getElementsByTagName("element")
+
+for zoom in range(18,19):
+
     for e in elements:
         id=str(e.getElementsByTagName("id")[0].\
         firstChild.nodeValue).strip('\n ')
@@ -19,6 +31,6 @@ for zoom in range(1,19):
             key=t.getAttribute("k")
             value=t.getAttribute("v")
             listTag.append(str('['+key+']=\''+value+'\''))
-        renderLegendElement("osm_full.xml", type, listTag, zoom, 50,\
-         'pics/'+str(zoom)+'-'+str(id)+'.png')
+        renderLegendElement(sourceFile, type, listTag, zoom, 50,\
+         dir+str(zoom)+'-'+str(id)+'.png')
 
