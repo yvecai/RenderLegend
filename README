@@ -4,68 +4,65 @@ Mapnik.
 The core of the project is RenderLegendElement.py that rendered a small 
 pic with given tags, size and shape against a mapnik style sheet.
 It make use of the osm datasource in mapnik, and does not need any sql
-database.
+database. Simple and easy !
 
 Mapnik 0.7.2 dev branch is required.
 => svn co http://svn.mapnik.org/branches/0.7.2-dev/ mapnik-0.7.2
+
+Usage exemple:
+    Put RenderLegendElement.py in the same directory as osm.xml, then:
+      $python
+      >>>from RenderLegendElement import renderLegendElement
+      >>>renderLegendElement("osm.xml", 'line',["[highway]='primary'","[bridge]='yes'"],18, 50, 'output.png')
+    That's it!
 
 RenderLegendElement.py:
     Input:
      _ mapnik stylesheet
      _ elementType: point, line, square, rectangle, pointtext, linetext,
-       lineshield, squaretext, rectangletext, squarepoint
-     _ tagList in python style ["[key]='value'", "[key]='value'"]
-     _ zoom
+       lineshield, squaretext, rectangletext, squarepoint, smallline
+     _ tagList python style ["[key1]='value1'", "[key2]='value2'"]
+     _ zoom level
      _ imageWidth, image heigth is calculated, and anyway the output is
-       cropped to its smallest extent
-     _ image filename
-     Intermediate computation:
-      _ element.osm is a temporary osm-type xml file of the element to be
-        rendered, centered on (lat,lon) (0,0)
-      _ mapfile.xml is a temporary mapnik style sheet, copy of the
-        previous with the following modifications:
-         * bgcolor
-         * removed world, coastpoly, etc ... layer
-         * datasource set to osm, element.osm
-         * postgis datasource query transformed into rule filter with 
-           queryToFilter(sql) function
-         * <else> filter is replaced by a filter that negates previous ones
-         * if no PolygonSymbolizer is found in the rule, and not (area=yes)
-           is added to the filter
+       cropped to its smallest extent to make page formatting more concise.
+     _ output image filename
+     
      Output:
       _ png image of width =< 'width'
+    
+How it works:
+      First, the stylesheet is serialized to include all external 
+    references. Then create_legend_stylesheet() create a new stylesheet
+    to be use directly with osm datasource plugin, avoiding the need to 
+    create a postgres database.
+    To provide a render as close as possible to the original stylesheet,
+    any sql query from the <layer> part is translated into a <filter> in
+    the <style> sections. 
     
      The mapnik osm datasource plugin does not features (yet ?) the 
     osm2pgsql complex handling of polygons.
     Thus area features (ie rectangle and squares) are affected with a tag
     [is_area]='yes' and all rules from the style sheet not featuring a 
-    PolygonSymbolizer are modified with "and not ([is_area]='yes')" to avoid
-    rendering artifacts.
+    PolygonSymbolizer are modified with "and not ([is_area]='yes')" to 
+    avoid rendering artifacts.
     Central points and 'name' should be described with rectanglepoint 
     and rectangletext elements, resp. squarepoint and squaretext.
 
-Usage exemple:
-    >>>import renderLegendElement
-    >>>renderLegendElement("osm.xml", 'line',["[highway]='primary'","[bridge]='yes'"],18, 50, 'output.png')
-
 Tools:
-    osm_full.xml is an OpenStreetMap slippy map style sheet generated with
-    generate_xml.py. RenderLegendElement.py does not support large xml 
-    include system yet.
-    
     legend_compact.xml is a legend descriptor file dedicated to create 
     formated html legend with several element in a line.
+    It (should) contains all the elements rendered by the slippy map 
+    except turning circles which are not handled by RenderLegendElement.py.
     
     RenderLegend.py shows how to render pics of every legend elemnts from 
     legend_compact.xml.
     
-    RenderLegendFast.py is a faster version of the above, calling directly 
-    functions create_legend_stylesheet() and createOsmElement() to avoid 
-    complete parsing of the stylesheet for each legend element.
+    RenderLegendFast.py is a faster (2x) version of the above, calling 
+    directly functions create_legend_stylesheet() and createOsmElement()
+    to avoid complete parsing of the stylesheet for each legend element.
     
     An example of use of legend_compact.xml and pics of legend elements
     pre-rendered with RenderLegendElement.py can be seen here: 
-    http://dev-yves.dyndns.org/legend/page.html (powered by Apache and 
-    mod_python).
+    http://dev-yves.dyndns.org/legend/page.html.
     
 

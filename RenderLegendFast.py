@@ -12,6 +12,7 @@ import tempfile
 import os
 import xml.dom.minidom as minidom
 from xml.dom.minidom import getDOMImplementation
+from lxml import etree
 import Image
 import ImageChops
 import ImageFile
@@ -31,10 +32,14 @@ d = os.path.dirname(dir)
 if not os.path.exists(d):
     os.makedirs(d)
 
+"""
 # 'Fake' load a map to use mapnik libxml2 support for large xml files
 mSource = mapnik.Map(1,1)
 mapnik.load_map(mSource,sourceFile)
 inputstylesheet=mapnik.save_map_to_string(mSource)
+"""
+# serialize map file with external entities
+inputstylesheet=etree.tostring(etree.parse(sourceFile))
 
 # the mapfile (stylesheet made jsut for legned element rendering
 # is returned as a string, no file is written on disk
@@ -44,10 +49,12 @@ mapfile = create_legend_stylesheet(inputstylesheet)
 doc = minidom.parse(legendFile)
 elements = doc.getElementsByTagName("element")
 
-for zoom in range(17,18):
+for zoom in range(1,19):
     for e in elements:
         id=str(e.getElementsByTagName("id")[0].\
         firstChild.nodeValue).strip('\n ')
+        try: caption=e.getAttribute("caption").strip('\n ')
+        except: caption=''
         type=str(e.getElementsByTagName("type")[0].firstChild.\
         nodeValue).strip('\n ')
         tags=e.getElementsByTagName("tag")
@@ -56,7 +63,7 @@ for zoom in range(17,18):
             key=t.getAttribute("k")
             value=t.getAttribute("v")
             listTag.append(str('['+key+']=\''+value+'\''))
-        map_uri=dir+str(zoom)+'-'+str(id)+'.png'
+        map_uri=dir+str(zoom)+'-'+str(id)+'.png' #'-'+caption+
         #we create a new element, which return its bbox
         osmStr, bound = createOsmElement(type, listTag, zoom)
         # create a named temporary file

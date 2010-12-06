@@ -44,6 +44,7 @@ import os
 import pdb
 import xml.dom.minidom
 from xml.dom.minidom import getDOMImplementation
+from lxml import etree
 import Image
 import ImageChops
 import ImageFile
@@ -57,7 +58,18 @@ faclon=0.006
 
 # cemetery : look for "INT-generic"
 # issue with buildings point-symbolizer
-
+def createEmptyOsm():
+    """ create an empty osm file in the temporary directory
+    """
+    osmStr = '<?xml version="1.0" encoding="UTF-8"?>\
+    <osm version="0.6" generator="legend2osm">\
+    <bounds minlat="-85" minlon="-180" maxlat="85" maxlon="180"/>\
+    </osm>'
+    emptyOsmFile = tempfile.NamedTemporaryFile(mode='w+t')
+    emptyOsmFile.write(osmStr) #write the osm file
+    emptyOsmFile.seek(0) #rewind
+    return emptyOsmFile
+#
 def create_legend_stylesheet(inputstylesheet):#,outputstylesheet):
     """create legend-style.xml, a temporary mapnik style sheet, copy of
     the input stylesheet with the following modifications:
@@ -201,7 +213,23 @@ def create_legend_stylesheet(inputstylesheet):#,outputstylesheet):
             filter[0].firstChild.nodeValue = '('+\
              filter[0].firstChild.nodeValue +\
              ') and not [is_area]=\'yes\''
-             
+    # Replace the postgres database parameter by an empty one that won't
+    # cause error on loading:
+    
+    for layer in layers:
+        datasource = layer.getElementsByTagName("Datasource")
+        # remove all datasource parameters:
+        while (len(datasource[0].childNodes)-1):
+            datasource[0].removeChild(datasource[0].childNodes[0])
+        #add the new datasource
+        t=doc.createElement("Parameter")
+        datasource[0].appendChild(t).setAttribute("name", "type")
+        ptext = doc.createTextNode("osm")
+        t.appendChild(ptext)
+        
+        f=doc.createElement("Parameter")
+        ptext = doc.createTextNode(createEmptyOsm().name)
+        f.appendChild(ptext)
     return str(doc.toxml())
 #
 def queryToFilter(sql):
@@ -213,6 +241,11 @@ def queryToFilter(sql):
     
     query=sql.lower()
     # First, keep only the interesting part of the query
+    
+    # exit from the function if not present:
+    try: queryFilter=query.split('where ')[1]
+    except: return ''
+    
     queryFilter=query.split('where ')[1]
     queryFilter=queryFilter.split('as ')[0]
     queryFilter=queryFilter.strip(' ')
@@ -231,6 +264,8 @@ def queryToFilter(sql):
     # remove key if'key is null'
     queryFilter=re.sub('([a-zA-Z:0-9_;]*\sis\snull\sor\s[a-zA-Z:0-9_;]*\s(not\s)*in\s\([^)]*\))|([a-zA-Z:0-9_;]*\sis\snull\sor\s[a-zA-Z:0-9_;]*\s*<>\s*[\'a-zA-Z:0-9_;]*)','',queryFilter)
     queryFilter=re.sub('[a-zA-Z:0-9_;]*\sis\snull\sand','',queryFilter)
+    #XXX added lately, to be tested:
+    queryFilter=re.sub('[a-zA-Z:0-9_;]*\sis\snull','',queryFilter)
     # symplify not in ('no','false','0')
     queryFilter=re.sub(\
     'not\s+in\s*\(\'no\',\'false\',\'0\'\)','=\'yes\'',queryFilter)
@@ -287,6 +322,7 @@ def getTagKey(lo): #[key]='value' -> key
         return key
     else:
         return 'null'
+#
 def getTagValue(lo): #[key]='value' -> value
     if (lo.find("\'")!= -1): value=lo[lo.find("\'")+1:-1]
     else: value=re.findall('[0-9]+',lo)[0]
@@ -585,15 +621,18 @@ def test():
     """
     renderLegendElement("osm.xml", 'line',\
      ["[highway]='primary'"],\
-      18, 50, 'output.png')
+      16, 50, 'output.png')
 #
 def renderLegendElement(sourceFile, elementType, tagList, zoom, imageWidth, map_uri):
     
+    """
     # 'Fake' load a map to use mapnik libxml2 support for large xml files
     mSource = mapnik.Map(1,1)
     mapnik.load_map(mSource,sourceFile)
     inputstylesheet=mapnik.save_map_to_string(mSource)
-    
+    """
+    # serialize map file with external entities included
+    inputstylesheet=etree.tostring(etree.parse(sourceFile))
     # the mapfile (stylesheet made only for legend element rendering
     # is returned as a string, no file is written on disk
     # then use mapnik.load_map_from_string
@@ -602,8 +641,7 @@ def renderLegendElement(sourceFile, elementType, tagList, zoom, imageWidth, map_
     # create a new element, which return its bbox and an osm file as
     # a string
     osmStr, bound = createOsmElement(elementType, tagList, zoom)
-    # create a named temporary file
-    # l.datasource = Osm(file=osmFile.name) needs a real file 
+    # create a named temporary file, mapnik needs a real file 
     # we cannot pass a StringIO nor a string, nor a unnammed
     # temporary file
     osmFile = tempfile.NamedTemporaryFile(mode='w+t')
@@ -631,7 +669,7 @@ def renderLegendElement(sourceFile, elementType, tagList, zoom, imageWidth, map_
         l.srs = lonlat.params()
     
     # uncomment this line to save the mapfile on disk, remember to 
-    # NEVER show this file to a mapfile maintainer:
+    # NEVER show this file to a stylesheet maintainer:
     #save_map(m,'mapfile.xml')
     
     

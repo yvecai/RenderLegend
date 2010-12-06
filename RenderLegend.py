@@ -9,7 +9,7 @@ import os
 sourceFile="osm.xml"
 legendFile='legend_compact.xml'
 imageWidth=50
-dir='pics2/'
+dir='pics/'
 
 d = os.path.dirname(dir)
 if not os.path.exists(d):
